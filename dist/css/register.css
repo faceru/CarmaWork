@@ -1,0 +1,42 @@
+.window{
+	display: none;
+	position: absolute;
+	top:80%;
+	right: 0;
+	background: #b4b4b4;
+	border: 1px solid black;
+	z-index: 2;
+	width: 70%!important;
+	max-height: 200px; 
+	overflow-y: auto;
+}
+
+.window p{
+	text-align: left;
+	width: 100%;
+	cursor: pointer;
+	padding-left: 1%;
+	font-size: 0.9rem;
+	border-bottom: 1px solid #f3d6b4;
+}
+
+.window p:hover{
+	background: #c0b9af;
+	color: #fff;
+}
+
+#fuq_window{
+	width: auto!important;
+}
+
+#spec_window{
+	width: auto!important;
+}
+
+input{
+	font-size: 0.9rem;
+}
+
+select option{
+	background: #b4b4b4;
+}

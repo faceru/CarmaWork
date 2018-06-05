@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Hosting -->
+	<!-- <base href="https://хостинг/путь к проекту"> -->
+	<!-- <link href="https://vk.com" rel="canonical"> -->
+	
+	<!-- Title + Ancoding -->
+	<title>CarmaWork Registrate</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<!-- Adaptive -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!--Descriptions -->
+	<meta name="description" content="Описание страницы для SEO и соцсетей">
+	<meta name="keywords" content="ключевые, слова, через, запятую">
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	
+	<link rel="stylesheet" href="css/animate.min.css">
+	
+	<link rel="stylesheet" href="css/jquery.arcticmodal-0.3.css">
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+	<link href="css/media.css" rel="stylesheet" type="text/css">
+	
+	<!-- GoogleFonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+	<!-- Фавикон -->
+	<!-- <link rel="icon" href="путь до иконки в проект" type="image/x-icon"> -->
+	<!-- <link rel="shortcut" href="путь до иконки в проект" type="image/x-icon"> -->
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!-- OG titles -->
+	<!-- <meta property="og:title" content="asdasd"> -->
+	<!-- <meta property="og:description" content="asdasd"> -->
+	<!-- <meta property="og:image" content="URL"> -->
+	<!-- <meta property="og:site_name" content="sdasda"> -->
+	<link href="css/registermodule.css" rel="stylesheet" type="text/css">
+	<link href="css/register.css" rel="stylesheet" type="text/css">
+	<link href="css/media.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<section id="register">
+		<div class="container">
+			<!-- LOGO -->
+			<div class="row">
+				<div class="col-xl-12">
+					<div class="col-xl-12 text-center animated fadeInDown">
+						<a href="/" class="login_logo">
+							<img src="img/logo.png" alt="Logo" class="logo_img" >
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-12 text-center">
+					<p class="error_register">
+						Проверьте заполены ли обязательные поля*
+					</p>					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-12">
+					<!-- container for forms -->
+					<div class="files" id="files">
+						<div class="row">
+							<!-- BUTTONS FOR FORMS -->
+							<div class="col-xl-6 col-6 text-right">
+								<div class="files_jobgiver">
+									<a href="#" id="jobgiver" class="rab change">
+										Работодатель
+									</a>
+								</div>
+							</div>
+							<div class="col-xl-6 col-6">
+								<div class="files_worker">
+									<a href="#" class="wor change" id="worker">
+										Студент
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- FORM FOR STUDENT -->
+						<div class="row text-center">
+							<div class="col-xl-6">
+								<div class="animated fadeInLeft files_worker_form">
+
+								<!-- WINDOW FIX SYSTEM BOX FOR ABSOLUTE AND WIDTH -->
+								<div class="window_fix">
+									<label for="surname" class="upper" >
+										Фамилия*
+									</label>
+									<input type="text" id="surname" class="surnameall clearinput clearcolor">
+								</div>
+									
+
+								<div class="window_fix">
+									<label for="name" class="upper">
+										Имя*
+									</label>
+									<input type="text" id="name" class="nameall clearinput clearcolor">
+								</div>
+									
+
+								<div class="window_fix">
+									<label for="otche" class="upper">
+										Отчество
+									</label>
+									<input type="text" id="otche" class="clearinput">
+								</div>
+									
+
+								<div class="window_fix">
+									<label for="email" class="upper">
+										E-mail*
+									</label>
+									<input type="email" id="email" class="emailall clearinput clearcolor">
+								</div>
+									
+								<div class="window_fix">
+									<label for="country" class="upper">
+										Страна
+									</label>
+									<input type="text" id="country" class="clearinput clearcolor" onkeyup="">
+									<div class="window" id="country_window">
+									</div>
+								</div>
+
+								<div class="window_fix">
+									<label for="city" class="upper">
+										Город
+									</label>
+									<input type="text" id="city" disabled class="clearinput clearcolor" onkeyup="">
+									<div class="window" id="city_window">
+									</div>
+								</div>
+
+								<div class="window_fix">
+									<label for="vuz" class="upper">
+										Вуз*
+									</label>
+									<input type="text" id="vuz" class="clearinput clearcolor" onkeyup="filterUniversity()">
+									<div class="window" id="vuz_window">
+									</div>
+								</div>
+									
+								<div class="window_fix">
+									<label for="fuq" class="upper">
+										Факультет*
+									</label>
+									<input type="text" id="fuq" disabled class="clearinput clearcolor" onkeyup="filterFaculty()">
+									<div class="window" id="fuq_window">
+									</div>
+								</div>
+									
+								<div class="window_fix">
+									<label for="spec" class="upper">
+										Направление*
+									</label>
+									<input type="text" id="spec" disabled class="clearinput clearcolor" onkeyup="filterDirection()">
+									<div class="window" id="spec_window">
+									</div>
+								</div>
+
+								<div class="window_fix">
+									<label for="zaoch" class="upper">
+										Форма обучения*
+									</label>
+									<select name="zaoch" id="zaoch">
+										<option value="0">Не выбрано</option>
+										<option value="1">Дневная</option>
+										<option value="2">Заочная</option>
+										<option value="3">Оч-заочная</option>
+									</select>
+								</div>
+
+								<div class="window_fix">
+									<label for="kurs" class="upper">
+										Курс*
+									</label>
+									<select name="kurs" id="kurs">
+										<option value="0">Не выбрано</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+									</select>
+								</div>
+
+								<div class="window_fix">
+									<label for="vk" class="upper">
+										ВКонтакте ID:
+									</label>
+									<input type="text" id="vk" class="clearinput">
+								</div>
+
+								<div class="window_fix">
+									<label for="telegram" class="upper">
+										Telegram
+									</label>
+									<input type="text" id="telegram" class="clearinput">
+								</div>
+								
+								<div class="window_fix">
+									<label for="skype" class="upper">
+										Skype
+									</label>
+									<input type="text" id="skype" class="clearinput">
+								</div>
+
+								<div class="window_fix">
+									<label for="password" class="upper" >
+										Пароль*
+									</label>
+									<input type="password" id="password" class="passwordall clearinput clearcolor">
+								</div>
+								
+								<div class="checkbox">
+									<input type="checkbox" value="yes" name="yes" id="checkbox_work" class="checkboxall">
+									<label for="checkbox_work" class="iam_agree">
+										Я даю согласие на обработку
+									</label>
+									<a href="#" class="personal" id="soglasie1">
+										персональных данных
+									</a>
+									<a style="cursor: pointer;" class="upper yes register_click" id="register_student">
+										Зарегестрироваться
+									</a>
+								</div>
+
+								</div>
+							</div>
+							
+							<!-- FORM FOR JOBGIVER -->
+							<div class="col-xl-6">
+								<div class="animated fadeInRight files_jobgiver_form">
+									<div class="window_fix">
+									<label for="surname_job" class="upper" >
+										Фамилия*
+									</label>
+									<input type="text" id="surname_job" class="surnameall clearinput clearcolor">
+								</div>
+									
+
+								<div class="window_fix">
+									<label for="name_job" class="upper">
+										Имя*
+									</label>
+									<input type="text" id="name_job" class="nameall clearinput clearcolor">
+								</div>
+									
+
+								<div class="window_fix">
+									<label for="otche_job" class="upper">
+										Отчество
+									</label>
+									<input type="text" id="otche_job" class="clearinput">
+								</div>
+									
+
+								<div class="window_fix">
+									<label for="email_job" class="upper">
+										E-mail*
+									</label>
+									<input type="email" id="email_job" class="emailall clearinput clearcolor">
+								</div>
+
+								<div class="window_fix">
+									<label for="country_job" class="upper">
+										Страна
+									</label>
+									<input type="text" id="country_job" class="clearinput clearcolor" onkeyup="">
+									<div class="window" id="country_job_window">
+									</div>
+								</div>
+
+								<div class="window_fix">
+									<label for="city_job" class="upper">
+										Город
+									</label>
+									<input type="text" id="city_job" disabled class="clearinput clearcolor" onkeyup="">
+									<div class="window" id="city_job_window">
+									</div>
+								</div>
+
+								<div class="window_fix">
+									<label for="vk_job" class="upper">
+										ВКонтакте ID:
+									</label>
+									<input type="text" id="vk_job" class="clearinput">
+								</div>
+
+								<div class="window_fix">
+									<label for="telegram_job" class="upper">
+										Telegram
+									</label>
+									<input type="text" id="telegram_job" class="clearinput">
+								</div>
+								
+								<div class="window_fix">
+									<label for="skype_job" class="upper">
+										Skype
+									</label>
+									<input type="text" id="skype_job" class="clearinput">
+								</div>
+
+								<div class="window_fix">
+									<label for="password_job" class="upper" >
+										Пароль*
+									</label>
+									<input type="password" id="password_job" class="passwordall clearinput clearcolor">
+								</div>
+
+								<div class="checkbox">
+									<input type="checkbox" value="false" name="yes" id="checkbox_label_job" class="checkboxall">
+									<label for="checkbox_label_job" class="iam_agree">
+										Я даю согласие на обработку
+									</label>
+									<a href="#" class="personal" id="soglasie2">
+										персональных данных
+									</a>
+									<a style="cursor: pointer; margin-bottom: 45%" class="upper yes register_click" id="register_employer">
+										Зарегестрироваться
+									</a>
+								</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- MODAL PAGE FOR SUCSESS -->
+	<div style="display: none;">
+    <div class="box-modal" id="exampleModal">
+        <div class="box-modal_close arcticmodal-close"></div>
+       <img src="img/soglasie.png" alt="">
+    </div>
+	</div>
+
+	<!-- REGISTER MODUL -->
+	<div style="display: none;">
+    <div class="box-modal" id="register_modul">
+    	<div class="box-modal_close arcticmodal-close"></div>
+    	<div class="register_modul_block">
+    		<p class="register_modul_error">
+    			Неверный код
+    		</p>
+    		<h3 class="upper">
+    			На вашу почту отправлен код.
+    		</h3>
+			<input type="text" placeholder="Введите код из письма" id="code">
+			<button class="register_modul_btn upper">
+				Подтвердить
+			</button>
+    	</div>
+    </div>
+	</div>
+
+
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min"></script>
+	<!-- <script src="js/parallax.min.js"></script> -->
+	<script src="js/jquery.arcticmodal-0.3.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/list.js"></script>
+	<script src="js/register.js"></script>
+</body>
+</html>

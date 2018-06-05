@@ -1,0 +1,33 @@
+#login{
+	background: url(../img/loginfile.png) no-repeat center top;
+	background-size: cover;
+	height: 100%;
+}
+
+.login_buttons {
+	display: block;
+	padding-bottom: 20.4%;
+}
+
+#rebootpass{
+	background: url(../img/reboot.png) no-repeat center top;
+	background-size: cover;
+	height: 100%;
+}
+
+.reboot_buttons {
+	display: block;
+	padding-bottom: 32%;
+}
+
+.reboot_login{
+	margin-left: 13%!important;
+}
+
+.session_deactiv{
+	display: none;
+}
+
+.session_activ{
+	display: none;
+}

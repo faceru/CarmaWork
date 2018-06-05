@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Hosting -->
+	<!-- <base href="https://хостинг/путь к проекту"> -->
+	<!-- <link href="https://vk.com" rel="canonical"> -->
+	
+	<!-- Title + Ancoding -->
+	<title>CarmaWork Result</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<!-- Adaptive -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!--Descriptions -->
+	<meta name="description" content="Описание страницы для SEO и соцсетей">
+	<meta name="keywords" content="ключевые, слова, через, запятую">
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	
+	<link rel="stylesheet" href="css/animate.min.css">
+	
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+	<link href="css/media.css" rel="stylesheet" type="text/css">
+	
+	<!-- GoogleFonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+	<!-- Фавикон -->
+	<!-- <link rel="icon" href="путь до иконки в проект" type="image/x-icon"> -->
+	<!-- <link rel="shortcut" href="путь до иконки в проект" type="image/x-icon"> -->
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!-- OG titles -->
+	<!-- <meta property="og:title" content="asdasd"> -->
+	<!-- <meta property="og:description" content="asdasd"> -->
+	<!-- <meta property="og:image" content="URL"> -->
+	<!-- <meta property="og:site_name" content="sdasda"> -->
+	<link href="css/result.css" rel="stylesheet" type="text/css">
+	<link href="css/media.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<section id="result">
+		<div class="container">
+			<div class="row animated fadeInDown">
+				<div class="col-xl-6 col-6">
+					<a href="/" class="login_logo">
+						<img src="img/logo.png" alt="Logo" class="logo_img" >
+					</a>
+				</div>
+				<div class="col-xl-6 col-6 text-right">
+					<a style="cursor: pointer;" class="result_exit logout_view">
+						Выход
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-12">
+					<div class="result">
+						<div class="row">
+							<div class="col-xl-9 col-md-9 col-sm-8 col-7">
+								<div class="cards animated fadeInRight">
+									<div class="card " style="opacity: 0;">
+										<div class="row text-center">
+											<div class="col-xl-4 col-md-4 ">
+												<p class="upper card_surname bolder"></p>
+											</div>
+											<div class="col-xl-4 col-md-4 ">
+												<p class="upper card_name bolder"></p>
+											</div>
+											<div class="col-xl-4 col-md-4 ">
+												<p class="upper card_otch bolder"></p>
+											</div>
+										</div>
+										<div class="row ">
+											<div class="col-xl-6 col-md-6 col-sm-6">
+												<p class="upper card_vuz"></p>
+											</div>
+											<div class="col-xl-6 col-md-6 col-sm-6">
+												<p class="upper card_fuq"></p>
+											</div>
+											
+										</div>
+										<div class="row ">
+											<div class="col-xl-6 col-md-6 col-sm-6">
+												<p class="upper card_kurs"></p>
+											</div>
+											<div class="col-xl-6 col-md-6 col-sm-6">
+												<p class="upper card_spec"></p>
+											</div>
+											
+										</div>
+										<div class="row text-center">
+											<div class="col-xl-4 col-md-4 col-sm-4">
+												<p class="upper card_telegram"></p>
+											</div>
+											<div class="col-xl-4 col-md-4 col-sm-4">
+												<a href="" target="_blank" class="upper card_vk"></a>
+											</div>
+											<div class="col-xl-4 col-md-4 col-sm-4">
+												<p class="upper card_skype"></p>
+											</div>
+										</div>
+										<div class="row text-center">
+											<div class="col-xl-12">
+												<p class="result_email upper" style="margin-top: 1%"></p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-3 col-md-3 col-sm-4 col-5">
+								<div class="result_filtr animated fadeIn">
+									<div class="result_filtr_kurs">
+										<label for="result_kurs" class="upper">
+											Курс
+										</label>
+										<select name="result_kurs" id="result_kurs">
+											<option value="0">Не выбрано</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+										</select>
+									</div>
+									<div class="result_filtr_form">
+										<label for="result_form" class="upper">
+											Форма обучения
+										</label>
+										<select name="result_form" id="result_form">
+											<option value="0">Не выбрано</option>
+											<option value="1">Дневная</option>
+											<option value="2">Заочная</option>
+											<option value="3">Оч-заочная</option>
+										</select>
+									</div>
+									<div class="result_filtr_vuz">
+										<label for="result_vuz" class="upper">
+											Вуз
+										</label>
+										<input type="text" id="result_vuz" onkeyup="filterUniversity()">
+										<div class="result_vuz_window result_window">
+										</div>
+									</div>
+									<div class="result_filtr_faq">
+										<label for="result_faq" class="upper">
+											Факультет
+										</label>
+										<input type="text" disabled id="result_faq" onkeyup="filterFaculty()">
+										<div class="result_faq_window result_window">
+										</div>
+									</div>
+									<div class="result_filtr_spec">
+										<label for="result_spec" class="upper">
+											Направление
+										</label>
+										<input type="text" disabled id="result_spec" onkeyup="filterDirection()">
+										<div class="result_spec_window result_window">
+										</div>
+										
+									</div>
+									<a href="#" class="upper clear">
+										Очистить
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-9 col-md-9 col-12">
+					<div class="row text-center">
+						<div class="col-xl-3 col-sm-3 col-4 ">
+							<a class="first_cards upper">
+								В начало
+							</a>
+						</div>
+						<div class="col-xl-3 col-sm-3 col-2">
+							<a class="card_prev">
+								<i class="fa fa-angle-left"></i>
+							</a>
+						</div>
+						<div class="col-xl-3 col-sm-3 col-2">
+							<a class="card_next">
+								<i class="fa fa-angle-right"></i>
+							</a>
+						</div>
+						<div class="col-xl-3 col-sm-3 col-4">
+							<a class="last_cards upper" >
+								В конец
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min"></script>
+	<!-- <script src="js/parallax.min.js"></script> -->
+	<script src="js/jquery.bxslider.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/logout.js"></script>
+	<script src="js/result_list.js"></script>
+</body>
+</html>

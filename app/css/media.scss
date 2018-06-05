@@ -1,0 +1,160 @@
+.logout_view{
+	margin-top: 7%;
+}
+@media screen and (max-width: 1200px) {
+	/*index*/
+	.buttons{
+		margin-bottom: 10%!important;
+	}
+	.jobgiver{
+		height: 80%;
+	}
+	.worker{
+		height: 80%;
+	}
+	.files{
+		background: 0;
+		width: 70%;
+		margin:0 auto;
+	}
+	.files_active{
+		background: 0;
+		width: 70%;
+		margin:0 auto;
+	}
+	.result_filtr a{
+		width: 60%;
+	}
+
+}
+@media screen and (max-width: 990px) {
+	.burger_menu{
+		top: -5%;
+	}
+	.why{
+		margin-left:-1%;
+	}
+
+	#how{
+		padding-bottom: 10%;
+	}
+	.files{
+		
+		width: 80%;
+		
+	}
+	.files_active{
+		
+		width: 80%;
+		
+	}
+	.result_filtr a{
+		width: 76%;
+	}
+}
+@media screen and (max-width: 768px) {
+	.utp_item{
+		
+			font-size: 1.6rem;
+		
+	}
+	.files{
+		
+		width: 90%;
+		
+	}
+	.files_active{
+		
+		width: 90%;
+		
+	}
+	.logout_view{
+		margin-top: 14%;
+	}
+	.card p{
+		margin-top: 10%;
+		font-size: 0.9rem;
+	}
+	.first_cards, .last_cards{
+		
+		margin-top: 25%;
+	}
+}
+@media screen and (max-width: 576px) {
+	.burger{
+		margin-top: 25%;
+	}
+	.utp_item{
+			font-size: 1rem;
+			margin-top: 5%;
+	}
+	h2{
+		font-size: 1rem;
+	}
+	.why{
+		h2{
+			font-size: 1.3rem;
+
+		}
+		p{
+			font-size: 1rem;
+		}
+	}
+	.burger_menu{
+		top: 0%;
+	}
+	#top{
+		text-align: center;
+	}
+	.login_buttons a{
+		
+		font-size: 0.9rem;
+	}
+	.files{
+		
+		width: 100%;
+		
+	}
+	.files_active{
+		
+		width: 100%;
+		
+	}
+	.iam_agree{
+		font-size: 0.8rem;
+
+	}
+	.personal{
+		font-size: 0.8rem;
+		display: block;
+	}
+	.yes{
+		font-size: 0.75rem;
+	}
+	#register_modul{
+		width: 30%;
+		margin-left:-15%;
+		h3{
+			font-size: 1rem;
+		}
+	}
+	.result_filtr a{
+		width: 80%;
+		text-align: center;
+		font-size: 0.8rem;
+	}
+	.result_filtr label{
+		font-size: 0.8rem;
+	}
+	.card p{
+		font-size: 0.8rem;
+	}
+	.first_cards, .last_cards{
+		font-size: 0.8rem;
+		margin-top: 30%;
+	}
+	.logout_view{
+		font-size: 1rem;
+		margin-top: 20%;
+	}
+}

@@ -1,0 +1,26 @@
+.window{
+	width: 70%!important;
+	max-height: 200px; 
+	overflow-y: auto;
+}
+
+.window p{
+	font-size: 0.9rem;
+	border-bottom: 1px solid #f3d6b4;
+}
+
+#fuq_window{
+	width: auto!important;
+}
+
+#spec_window{
+	width: auto!important;
+}
+
+input{
+	font-size: 0.9rem;
+}
+
+select option{
+	background: #b4b4b4;
+}

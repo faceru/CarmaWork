@@ -1,0 +1,60 @@
+.result_window{
+	max-height: 200px; 
+	overflow-y: auto;
+}
+
+.result_window p{
+	font-size: 0.9rem;
+	border-bottom: 1px solid #f3d6b4;
+}
+
+p{
+	text-transform: none!important;
+	font-size: 0.9rem;
+}
+
+.card a{
+	text-transform: none!important;
+	font-size: 0.9rem;
+}
+
+input{
+	font-size: 0.9rem;
+	border: 1px solid #000;
+}
+
+select{
+	font-size: 0.9rem;
+	border: 1px solid #000;
+}
+
+a{
+	cursor: pointer;
+}
+
+#error{
+	text-align: center;
+	margin-top: 25%;
+	color: red;
+	font-size: 1.4rem;
+}
+
+select option{
+	background: #b4b4b4;
+}
+
+.first_cards{
+	margin-bottom: 128%;
+}
+
+.first_cards:hover{
+	color: #eba962!important;
+}
+
+.last_cards:hover{
+	color: #eba962!important;
+}
+
+a:hover{
+	color: #eba962!important;
+}
